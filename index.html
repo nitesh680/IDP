@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Book My Event</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create an Account</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+
+            <button type="submit">Register</button>
+
+            <button type="submit" id="ad" onclick="window.location.href='userlog.html'" >LOG</button>
+
+            <button type="submit" id="ad" onclick="window.location.href='admin-login.html'" >Admin LOG</button>
+            
+        </form>
+
+        <script>
+            function validateForm() {
+                var username = document.getElementById("username").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                // Ensure all fields are filled
+                if (!username || !email || !password || !confirmPassword) {
+                    alert("All fields are required.");
+                    return false;
+                }
+
+                // Check if password matches confirm password
+                if (password == confirmPassword) {
+                    
+                     // Prevent form submission
+                    window.location.href = 'Homepage.html';
+                }
+
+                // If passwords match, redirect to Homepage.html
+                alert(" if Passwords matchs it will open if not re-enter correct passwords.");
+                    return false; // Prevent form submission
+            }
+        </script>
+    </div>
+</body>
+</html>

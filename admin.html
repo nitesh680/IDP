@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="#" id="manageBookingsLink">Manage Bookings</a></li>
+            <li><a href="#" id="viewUsersLink">View Users</a></li>
+            <li><a href="#" id="manageServicesLink">Manage Services</a></li>
+            <li><a href="#" id="generateReportsLink">Generate Reports</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Welcome, Admin!</h1>
+
+        <!-- Manage Bookings Section -->
+        <section id="manageBookingsSection">
+            <h2>Manage Bookings</h2>
+            <input type="text" id="searchBooking" placeholder="Search by user name..." onkeyup="filterBookings()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event ID</th>
+                        <th>User Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingList">
+                    <!-- Booking data will be dynamically generated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- View Users Section -->
+        <section id="viewUsersSection" style="display:none;">
+            <h2>View Users</h2>
+            <p>List of users will be displayed here...</p>
+        </section>
+
+        <!-- Manage Services Section -->
+        <section id="manageServicesSection" style="display:none;">
+            <h2>Manage Services</h2>
+            <p>Services like catering, lighting, etc. can be managed here...</p>
+        </section>
+
+        <!-- Generate Reports Section -->
+        <section id="generateReportsSection" style="display:none;">
+            <h2>Generate Reports</h2>
+            <p>Reports related to bookings, users, and services will be generated here...</p>
+        </section>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

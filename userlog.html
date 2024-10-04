@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Book My Event</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <script>
+            function validateLogin() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                // Ensure both fields are filled
+                if (!username || !password) {
+                    alert("Both fields are required.");
+                    return false;
+                }
+
+                // Check credentials (replace with your actual logic)
+                if (username === "8102897545" && password === "123") {
+                    // Redirect to homepage using relative path
+                    window.location.href = 'homepage.html'; 
+                    return false; // Prevent form submission
+                } else {
+                    alert("Invalid username or password.");
+                    return false;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

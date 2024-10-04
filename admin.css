@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* background: url('./ad1.jpeg');
+    background-size:cover ;
+    background-repeat: no-repeat;
+    position: relative; */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+}
+
+/* Hover effect on table rows */
+table tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect on buttons */
+button:hover {
+    background-color: #45a049;
+}
+
+button.reject {
+    background-color: #f44336;
+}
+
+/* Hover effect on reject buttons */
+button.reject:hover {
+    background-color: #e3342f;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+}
+
+.status {
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.status.pending {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.status.accepted {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Hover effect on user name (for clickable details) */
+td:hover {
+    color: blue;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+/* Hover effect for modal close button */
+.close:hover {
+    color: red;
+}
